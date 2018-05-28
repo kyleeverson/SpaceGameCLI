@@ -4,15 +4,25 @@ namespace SpaceGame
 {
 
 	class Manager {
+
+		Universe universe;
+
+		public Manager() {
+			universe = new Universe();
+		}
+
 		public void processInput() {
 			while (true) {
+				string universeMap = universe.BuildOutputString();
+				Console.WriteLine(universeMap);
+				
 				Console.Write("Command? ");
 				string input = Console.ReadLine();
-				if (input == "Y") {
+				string processLine = input.ToLower();
+				if (input == "exit") {
 					break;
 				}
 			}
-            Console.WriteLine("Hello World!");
 		}
 	}
 
