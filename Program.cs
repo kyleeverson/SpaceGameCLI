@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace spacegame
+namespace SpaceGame
 {
     class Program
     {
