@@ -2,11 +2,26 @@
 
 namespace SpaceGame
 {
+
+	class Manager {
+		public void processInput() {
+			while (true) {
+				Console.Write("Command? ");
+				string input = Console.ReadLine();
+				if (input == "Y") {
+					break;
+				}
+			}
+            Console.WriteLine("Hello World!");
+		}
+	}
+
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+			Manager manager = new Manager();
+			manager.processInput();
         }
     }
 }
