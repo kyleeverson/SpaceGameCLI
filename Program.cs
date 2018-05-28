@@ -35,6 +35,7 @@ namespace SpaceGame
 						break;
 
 					case "help":
+					case "":
 						DisplayHelp();
 						break;
 
