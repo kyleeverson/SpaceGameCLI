@@ -11,16 +11,41 @@ namespace SpaceGame
 			universe = new Universe();
 		}
 
-		public void processInput() {
-			while (true) {
-				string universeMap = universe.BuildOutputString();
-				Console.WriteLine(universeMap);
-				
-				Console.Write("Command? ");
+		public void DisplayHelp() {
+			Console.WriteLine("srs - Short range scan");
+			Console.WriteLine("help - Display this help message.");
+			Console.WriteLine("exit - Exit the game");
+		}
+
+		public void DisplayMap() {
+			string universeMap = universe.BuildOutputString();
+			Console.Write(universeMap);
+		}
+
+		public void ProcessInput() {
+			bool done = false;
+			while (!done) {
+				Console.Write("\nCommand? ");
 				string input = Console.ReadLine();
 				string processLine = input.ToLower();
-				if (input == "exit") {
-					break;
+
+				switch (input) {
+					case "srs":
+						DisplayMap();
+						break;
+
+					case "help":
+						DisplayHelp();
+						break;
+
+					case "exit":
+						done = true;
+						break;
+
+					default:
+						Console.WriteLine("Unknown command");
+						break;
+
 				}
 			}
 		}
@@ -31,7 +56,7 @@ namespace SpaceGame
         static void Main(string[] args)
         {
 			Manager manager = new Manager();
-			manager.processInput();
+			manager.ProcessInput();
         }
     }
 }
