@@ -1,5 +1,7 @@
 
 
+using System;
+
 namespace SpaceGame {
 	public class Universe {
 		SpaceQuadrant quadrant;
@@ -9,9 +11,15 @@ namespace SpaceGame {
 		}
 
 		public string BuildOutputString() {
-			string retValue = "";
+			string retValue = "--:---:---:---:---:---:---:---:---:\n";
 
-			retValue = "UniverseMap\n";
+			for (int i = 0; i < 8; i++) {
+				retValue += string.Format("{0} :", Convert.ToChar(i+65));
+				for (int j = 0; j < 8; j++) {
+					retValue += " - :";
+				}
+				retValue += "\n";
+			}
 
 			return retValue;
 
