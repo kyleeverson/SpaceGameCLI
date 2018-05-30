@@ -664,28 +664,30 @@
     ]
   },
   "packageFolders": {
-    "/Users/kyle/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\kylee\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/kyle/coreprojects/spacegame/spacegame.csproj",
+      "projectUniqueName": "D:\\projects\\SpaceGameCLI\\spacegame.csproj",
       "projectName": "spacegame",
-      "projectPath": "/Users/kyle/coreprojects/spacegame/spacegame.csproj",
-      "packagesPath": "/Users/kyle/.nuget/packages/",
-      "outputPath": "/Users/kyle/coreprojects/spacegame/obj/",
+      "projectPath": "D:\\projects\\SpaceGameCLI\\spacegame.csproj",
+      "packagesPath": "C:\\Users\\kylee\\.nuget\\packages\\",
+      "outputPath": "D:\\projects\\SpaceGameCLI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/kyle/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\kylee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -704,7 +706,7 @@
         "dependencies": {
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "2.0.0",
+            "version": "[2.0.0, )",
             "autoReferenced": true
           }
         },

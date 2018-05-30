@@ -6,7 +6,7 @@ namespace SpaceGame {
 	public class Universe {
 		SpaceQuadrant quadrant;
 
-		BaseShip m_MyShip;
+		public BaseShip m_MyShip { get; set; }
 
 		public Universe() {
 			quadrant = new SpaceQuadrant();
@@ -23,7 +23,7 @@ namespace SpaceGame {
 				for (int j = 0; j < 8; j++) {
 					int item = 0;
 					char chItem = ' ';
-					if (m_MyShip.IsMyShipLocation(i, j) == true) {
+					if (m_MyShip.IsMyShipLocation(j, i) == true) {
 						item = 1;
 					}
 					switch (item) {

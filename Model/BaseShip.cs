@@ -2,7 +2,7 @@
 using System;
 
 namespace SpaceGame {
-	class BaseShip : Location {
+	public class BaseShip : Location {
 		public double Shields { get; set; }
 		public double Damage { get; set; }
 	
