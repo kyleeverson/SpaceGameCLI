@@ -1,4 +1,6 @@
 
+using System;
+
 namespace SpaceGame {
 	public class Location {
 		public int X { get; set; }
@@ -9,8 +11,12 @@ namespace SpaceGame {
 			Y = -1;
 		}
 
-		public void GenerateRandomLocation() {
-			
+		public void RandomLocation()
+		{
+			Random rnd = new Random();
+			X = rnd.Next(0, 8);
+			Y = rnd.Next(0, 8);
 		}
+
 	}
 }

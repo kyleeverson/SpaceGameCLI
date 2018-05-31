@@ -8,19 +8,15 @@ namespace SpaceGame {
 		SpaceQuadrant quadrant;
 
 		public BaseShip m_MyShip { get; set; }
-		public List<Location> m_StarList { get; set; }
 
-		public Universe() {
+		private StarList m_StarList;
+
+        public Universe() {
 			quadrant = new SpaceQuadrant();
 			m_MyShip = new BaseShip();
 			m_MyShip.RandomLocation();
-
-			for (int i = 0; i < 5; i++) {
-				Location starLocation = new Location();
-				starLocation.RandomLocation();
-				m_StarList.Add(starLocation);
-			}
-			
+			m_StarList = new StarList();
+			m_StarList.BuildStarList();
 		}
 
 		public string BuildOutputString() {
