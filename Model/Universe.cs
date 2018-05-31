@@ -31,12 +31,18 @@ namespace SpaceGame {
 					if (m_MyShip.IsMyShipLocation(j, i) == true) {
 						item = 1;
 					}
+					if (m_StarList.IsStar(j, i) == true) {
+						item = 2;
+					}
 					switch (item) {
 						case 0:
 							chItem = '-';
 							break;
 						case 1:
 							chItem = 'S';
+							break;
+						case 2:
+							chItem = '*';
 							break;
 					}
 					retValue += string.Format(" {0} :", chItem);

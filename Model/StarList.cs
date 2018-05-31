@@ -13,6 +13,17 @@ namespace SpaceGame {
                 Add(starLocation);
 			}
         }
+
+        public bool IsStar(int x, int y) {
+            bool flag = false;
+            foreach (Location star in this) {
+                if (star.X == x && star.Y == y) {
+                    flag = true;
+                }
+            }
+
+            return flag;
+        }
         
     }
 }
