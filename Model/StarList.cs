@@ -6,8 +6,8 @@ namespace SpaceGame {
 
     class StarList : List<Location> {
 
-        public void BuildStarList() {
-			for (int i = 0; i < 5; i++) {
+        public void BuildStarList(int size) {
+			for (int i = 0; i < size; i++) {
 				Location starLocation = new Location();
 				starLocation.RandomLocation();
                 Add(starLocation);

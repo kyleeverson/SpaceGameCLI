@@ -23,6 +23,8 @@ namespace SpaceGame
 		}
 
 		public void ProcessInput() {
+			DisplayMap();
+			
 			bool done = false;
 			while (!done) {
 				Console.Write("\nCommand? ");
