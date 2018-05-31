@@ -8,5 +8,9 @@ namespace SpaceGame {
 			X = -1;
 			Y = -1;
 		}
+
+		public void GenerateRandomLocation() {
+			
+		}
 	}
 }

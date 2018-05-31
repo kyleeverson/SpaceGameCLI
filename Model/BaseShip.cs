@@ -11,13 +11,6 @@ namespace SpaceGame {
 			Damage = 100;
 		}
 
-		internal void RandomLocation()
-		{
-			Random rnd = new Random();
-			X = rnd.Next(0, 8);
-			Y = rnd.Next(0, 8);
-		}
-
 		public bool IsMyShipLocation(int x, int y) {
 			bool flag = false;
 

@@ -1,17 +1,26 @@
 
 
 using System;
+using System.Collections.Generic;
 
 namespace SpaceGame {
 	public class Universe {
 		SpaceQuadrant quadrant;
 
 		public BaseShip m_MyShip { get; set; }
+		public List<Location> m_StarList { get; set; }
 
 		public Universe() {
 			quadrant = new SpaceQuadrant();
 			m_MyShip = new BaseShip();
 			m_MyShip.RandomLocation();
+
+			for (int i = 0; i < 5; i++) {
+				Location starLocation = new Location();
+				starLocation.RandomLocation();
+				m_StarList.Add(starLocation);
+			}
+			
 		}
 
 		public string BuildOutputString() {
